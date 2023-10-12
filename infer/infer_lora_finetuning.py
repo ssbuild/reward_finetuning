@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/5/17 11:36
 import sys
-sys.path.append('..')
+sys.path.append('../..')
 
 import os
 import torch
@@ -20,7 +20,7 @@ if __name__ == '__main__':
     dataHelper = NN_DataHelper(model_args, None, data_args)
     tokenizer, _, _, _ = dataHelper.load_tokenizer_and_config()
 
-    ckpt_dir = './best_ckpt'
+    ckpt_dir = '../scripts/best_ckpt/last'
     config = AutoConfig.from_pretrained(ckpt_dir)
     lora_args = PetlArguments.from_pretrained(ckpt_dir)
 
