@@ -1,6 +1,7 @@
 
 ```text
-    10-09 inital reward
+    2024-04-22 简化
+    2023-10-09 inital reward
 ```
 
 ## update information

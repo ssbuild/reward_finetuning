@@ -5,7 +5,7 @@ from typing import Any
 import numpy as np
 import torch
 from torch.nn import functional as F
-from aigc_zoo.model_zoo.chatglm.generation_utils import build_masks_and_position_ids_glm
+from deep_training.zoo.model_zoo.chatglm.generation_utils import build_masks_and_position_ids_glm
 from transformers import PreTrainedTokenizer
 
 from data_factory.data_helper_base import NN_DataHelper_Base, data_conf

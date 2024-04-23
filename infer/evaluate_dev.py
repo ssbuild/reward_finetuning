@@ -9,15 +9,15 @@ from deep_training.data_helper import ModelArguments, DataArguments
 from tqdm import tqdm
 from transformers import HfArgumentParser,AutoConfig,PreTrainedTokenizer
 
-from data_utils import train_info_args, NN_DataHelper,get_deepspeed_config
-from aigc_zoo.model_zoo.auto.reward_model import MyRewardTransformer,PetlArguments
+from data_utils import config_args, NN_DataHelper,get_deepspeed_config
+from deep_training.zoo.model_zoo.auto.reward_model import MyRewardTransformer,PetlArguments
 
 deepspeed_config = get_deepspeed_config()
 
 if __name__ == '__main__':
-    train_info_args['seed'] = None
+    config_args['seed'] = None
     parser = HfArgumentParser((ModelArguments, ))
-    model_args = parser.parse_dict(train_info_args,allow_extra_keys=True)
+    model_args = parser.parse_dict(config_args,allow_extra_keys=True)
 
     tokenizer : PreTrainedTokenizer
     dataHelper = NN_DataHelper(model_args)
